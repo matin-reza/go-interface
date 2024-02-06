@@ -6,9 +6,9 @@ type Printer interface {
 	Print(string)
 }
 
-type Duck struct{}
+type HP struct{}
 
-func (d Duck) Print(str string) {
+func (d HP) Print(str string) {
 	fmt.Println(str)
 }
 
@@ -16,6 +16,6 @@ func start(q Printer) {
 	q.Print("go interface")
 }
 func main() {
-	myDuck := Duck{}
+	myDuck := HP{}
 	start(myDuck)
 }
